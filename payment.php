@@ -37,7 +37,7 @@ session_start();
 $ps=$_POST['tans'];
 $gen=$_SESSION['uid'];
 echo "<script>console.log('me$gen')</script>";
-$email=$_SESSION['pack']	;/*
+$email=$_get['id']	;/*
 $ph=$_POST['phno'];
 $addr=$_POST['Address'];
 $co=$_POST['cou'];
@@ -69,7 +69,7 @@ $dob=$_POST['date'];
 				if(mysqli_query($conn,$sql)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
-                echo"<script>location.href='home.php';	</script>";
+              //  echo"<script>location.href='home.php';	</script>";
 		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
 				}
             }

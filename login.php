@@ -32,7 +32,7 @@ If no account <a href='registration.php'>Register</a>
 session_start();
 
 	include './dbcheck.inc.php';
-
+	$pack=$_GET['packid'];
 
 	if(isset($_POST['sub']))
 	{
@@ -65,7 +65,7 @@ session_start();
 					{
 						echo "<script>console.log('LOGIN success')</script>";
 						$_SESSION['uid'] = $user_data['uid'];
-						echo"<script>location.href='payment.php';	</script>";
+						echo"<script>location.href='payment.php?ids=$pack';	</script>";
 						//header("Location: .../sl/index.html");// replace .../sl/index.html with .../foldername/filename
 						
 					}

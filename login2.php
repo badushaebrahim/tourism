@@ -32,7 +32,7 @@ If no account <a href='registration.php'>Register</a>
 session_start();
 
 	include './dbcheck.inc.php';
-
+	
 
 	if(isset($_POST['sub']))
 	{

@@ -90,8 +90,9 @@
 				<div class='col-md-6 col-sm-6'>
 					<div class='about-text'>";
 						echo"<p>$row[sec2]<br></p>";
-						$_SESSION['pack']=$packid;
-						echo"<a href='payment.php'><input class='epic'value='book'type='Button'></a>";
+						
+						//$_SESSION['pack']=$packid;
+						echo"<a href='payment.php?id=$packid'><input class='epic'value='book'type='Button'></a>";
 
 						echo"<ul class='withArrow'>
 							<li><span class='fa fa-angle-right'></span> Lorem ipsum dolor sit amet</li>
