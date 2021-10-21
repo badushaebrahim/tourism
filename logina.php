@@ -1,7 +1,3 @@
-<?php
-$pack=$_GET['packid'];
-?>
-
 <html>
 <body background="back.png" >
 <center>
@@ -11,7 +7,7 @@ $pack=$_GET['packid'];
 Email:<input type="text" name="userid"/><br><br>
 password:<input type="password" name="password"/><br><br>
 <br>
-If no account <a href='registration.php?id=<?php echo"$pack";	?>'>Register</a>
+If no account <a href='registration.php'>Register</a>
 <br>
 <br>
 <br>
@@ -36,7 +32,8 @@ If no account <a href='registration.php?id=<?php echo"$pack";	?>'>Register</a>
 session_start();
 
 	include './dbcheck.inc.php';
-	
+	$pack=$_GET['packid'];
+
 	if(isset($_POST['sub']))
 	{
         echo "<script> console.log('30')</script>";
@@ -50,7 +47,7 @@ session_start();
             echo "<script> console.log('38')</script>";
 
 			//read from database
-			$query = "SELECT * FROM `userregistration` WHERE Email = '$user_name';";
+			$query = "SELECT * FROM `admin`WHERE admin_id  = '$user_name';";
 			$result = mysqli_query($conn, $query);
 
 			if($result)
@@ -62,13 +59,13 @@ session_start();
                     echo "<script> console.log('50')</script>";
 
 					$user_data = mysqli_fetch_assoc($result);
-                    echo "<script> console.log('53$user_data[pwd]')</script>";
+                    echo "<script> console.log('53$user_data[password]')</script>";
 					
-					if($user_data['pwd'] == $password)
+					if($user_data['password'] == $password)
 					{
 						echo "<script>console.log('LOGIN success')</script>";
-						$_SESSION['uid'] = $user_data['uid'];
-						echo"<script>location.href='payment.php?ids=$pack';	</script>";
+						
+						echo"<script>location.href='home2.php';	</script>";
 						//header("Location: .../sl/index.html");// replace .../sl/index.html with .../foldername/filename
 						
 					}

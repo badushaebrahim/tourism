@@ -112,8 +112,9 @@ $dob=$_POST['do'];
 			if(mysqli_query($conn,$query)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
+		$id=$_GET['id'];
 		
-                echo"<script>location.href='login.php';	</script>";
+                echo"<script>location.href='login.php?packid=$id';	</script>";
 		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
             }
             
