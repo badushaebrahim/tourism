@@ -69,7 +69,7 @@ $dob=$_POST['date'];
 				if(mysqli_query($conn,$sql)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
-              //  echo"<script>location.href='home.php';	</script>";
+               echo"<script>location.href='home.php';	</script>";
 		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
 				}
             }
