@@ -56,9 +56,13 @@ $dob=$_POST['do'];	*/
 			if(mysqli_query($conn,$query)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
-		
-                echo"<script>location.href='addsec?.php';	</script>";
+		$f="SELECT * FROM `packages` WHERE (`cost`='$gen')";
+		if($mm=mysqli_query($conn,$f)){
+		$do=mysqli_fetch_assoc($mm);
+		echo "<script>console.log('done')</script>";
+                echo"<script>location.href='addsec.php?pack=$do[pack_no]&co=$do[cost]';	</script>";
 		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
+		}
             }else{echo "<script>alert('fail ')</script>";}
             
 			

@@ -9,8 +9,11 @@
 <body>
 <center>
 <form method="POST">
-<table>
-<tr><td>sec1</td></tr>
+<table><caption>About location</caption>
+	
+<tr><td>sec1</td><td><textarea name="sec1"></textarea></td></tr>
+<tr><td>sec2</td><td><textarea name="sec2"></textarea></td></tr>
+<tr><td><input type="submit" value="submit" name="sub"></textarea></td></tr>
 
 
 </table>
@@ -24,3 +27,58 @@
 
 </body>
 </html>
+
+
+<?php 
+include './dbcheck.inc.php';
+
+    echo "<script>console.log('55')</script>";
+
+	if(isset($_POST['sub']))
+	{
+        echo "<script> console.log('58')</script>";
+		//something was posted
+		/*$user_name = $_POST['username'];
+        $mailid =$_POST['email'];
+		$password = $_POST['pass'];*/
+
+		$name=$_POST['sec1'];
+$ps=$_POST['sec2'];
+$gen=$_GET['pack'];
+$cost=$_GET['co'];
+		
+        date_default_timezone_set("Asia/Calcutta");
+        $da= date('Y-m-d H:i:s');
+/*
+        echo "<script>console.log('$username 65')</script>";
+        echo "<script>console.log('$mailid 66')</script>";
+        echo "<script>console.log('$password 67')</script>";
+**/
+        echo "<script>console.log('69')</script>";
+
+		if(1==1)
+		{
+
+        echo "<script>console.log('75$da')</script>";
+			//save to database
+			
+			$query = "INSERT INTO `aboutpack`(`packid`, `sec1`, `sec2`, `location`) VALUES (' $gen','$name','$ps','$cost');";
+
+        echo "<script>console.log('80')</script>";
+
+			if(mysqli_query($conn,$query)){
+                echo "<script>console.log('done')</script>";
+                echo "<script>alert('update ok successful')</script>";
+		
+		
+                echo"<script>location.href='home2.php';	</script>";
+		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
+            }
+            
+			
+		}else
+		{
+			echo "Please enter some valid information!";
+		}
+	}
+?>
