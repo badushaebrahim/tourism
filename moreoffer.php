@@ -32,7 +32,7 @@ include'./dbcheck.inc.php';
         while($row=mysqli_fetch_assoc($f))
             {echo"<div class='col-md-4'>
 			<div class='box-content'>
-			<a href='details2.php?dif=$row[pack_no]'>
+			<a href='detail.php?dif=$row[pack_no]'>
                <img class='img-responsive'   src='img/spc/$co.jpg' alt=''>   
                 <h3>$row[location] <span class='price pull-right'>$row[cost]</span></h3>
 				
