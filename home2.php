@@ -25,7 +25,7 @@ $co=1;
 echo"<table border='solid white' ><caption><h1>All Packages</h1></caption><tr><td>No:</td><td>pack no</td><td>Cost</td><td>about</td><td>Location</td><td>Action</td></tr>";
 $sql = "SELECT * FROM `packages` ";
 $lo=mysqli_query($conn,$sql);while($row=mysqli_fetch_assoc($lo)){
-	echo"<tr><td>$co</td><td>$row[pack_no]</td><td>$row[cost]</td><td>$row[about]</td><td>$row[location]</td> <td><a href='lol.php'>Edit</a></td></tr>";
+	echo"<tr><td>$co</td><td>$row[pack_no]</td><td>$row[cost]</td><td>$row[about]</td><td>$row[location]</td> <td><a href='editpackage.php?id=$row[pack_no]'>Edit</a></td></tr>";
 $co++;
 }
 echo"</table>";
