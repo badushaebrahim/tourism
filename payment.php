@@ -37,7 +37,7 @@ session_start();
 $ps=$_POST['tans'];
 $gen=$_SESSION['uid'];
 echo "<script>console.log('me$gen')</script>";
-$email=$_get['id']	;/*
+$email=$_GET['id']	;/*
 $ph=$_POST['phno'];
 $addr=$_POST['Address'];
 $co=$_POST['cou'];
