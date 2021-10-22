@@ -6,9 +6,7 @@
 	<form method="POST">
 Email:<input type="text" name="userid"/><br><br>
 password:<input type="password" name="password"/><br><br>
-<br>
-If no account <a href='registration.php'>Register</a>
-<br>
+
 <br>
 <br>
 <input type="Submit" name="sub" value="LOGIN" class="epic">

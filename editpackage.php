@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Edit</title>
 </head>
 <body><table>
-<center>
+
 <form method="POST">
-<br><br><br><br><br><br><br><br><br>
+<center>
 <?php
 include './dbcheck.inc.php';
 $id=$_GET['id'];
@@ -19,14 +19,15 @@ if(($mok=mysqli_query($conn,$pk))&&($pp=mysqli_query($conn,$sk))){
 	$ro=mysqli_fetch_assoc($mok);
 	$rom=mysqli_fetch_assoc($pp);
 	echo"
-<tr><td>Location:</td><td> <textarea  name='Location' >$ro[location]</textarea></td></tr><br><br><br><br>
-<tr><td>About: <textarea name='About' >$ro[about]</textarea></td></tr><br><br><br><br>
-<tr><td>Cost: <textarea name='Cost' >$ro[cost]</textarea></td></tr><br><br><br>
+<tr><td>Location:</td><td> <textarea  name='Loc' >$ro[location]</textarea></td></tr><br><br><br><br>
+<tr><td>About:</td><td> <textarea name='About' >$ro[about]</textarea></td></tr><br><br><br><br>
+<tr><td>Cost: </td><td><input type='number' name='Cost' value='$ro[cost]' ></td></tr><br><br><br>
 <tr><td>sec1</td><td><textarea name='sec1'>$rom[sec1]</textarea></td></tr>
 <tr><td>sec2</td><td><textarea name='sec2'>$rom[sec2]</textarea></td></tr>";
-echo"<input type='Submit' name='sub' value='Submit'>
+echo"<tr><td></td><td><input type='Submit' name='sub' value='Submit'><a href='home2.php'><input type='button' name='sub' value='Back'></a></td></tr>
 
-
+</form>
+</table>
 ";
 }
 
@@ -34,3 +35,29 @@ echo"<input type='Submit' name='sub' value='Submit'>
 ?></form></table></center>
 </body>
 </html>
+<?php
+
+if(isset($_POST['sub'])){
+$cost=$_POST['Cost'];
+$about=$_POST['About'];
+$loc=$_POST['Loc'];
+$sec1=$_POST['sec1'];
+$sec2=$_POST['sec2'];
+echo "<script>console.log('inside45')</script>";
+//$packs="UPDATE `packages` SET`cost`=$cost,`about`=$about,`location`=$loc WHERE `pack_no`=$id ";
+
+$packs="UPDATE `packages` SET `cost`=$cost,`about`='$about',`location`='$loc' WHERE `pack_no`=$id";
+
+//$about2="UPDATE `aboutpack` SET `sec1`=$sec1,`sec2`=$sec2,`location`= $loc WHERE `packid`=$id";
+$about2="UPDATE `aboutpack` SET `sec1`='$sec1',`sec2`='$sec2',`location`='$loc' WHERE `packid`=$id";
+if($mok=mysqli_query($conn,$about2)){
+	echo "<script>console.log('yo')</script>";
+	if($pp=mysqli_query($conn,$packs)){
+	echo "<script>console.log(' successadobut')</script>";
+	}else{echo "<script>console.log('failinside')</script>";}
+
+}
+else{echo "<script>console.log('failout')</script>";}
+}
+
+?>
