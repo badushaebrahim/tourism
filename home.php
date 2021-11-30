@@ -21,9 +21,11 @@
 </div><br><br><center>
 <?php
 include './dbcheck.inc.php';
-$co=1;
+session_start();
+$co=0;
+$co2=$_SESSION['uid'];
 echo"<table border='solid white' ><caption><h1>MY Trips</h1></caption><tr><td>No:</td><td>Date</td><td>Payment_id</td><td>Action</td></tr>";
-$sql = "SELECT * FROM `opted_packages` WHERE `user_id`=1";
+$sql = "SELECT * FROM `opted_packages` WHERE `user_id`=$co2";
 $lo=mysqli_query($conn,$sql);while($row=mysqli_fetch_assoc($lo)){
 	echo"<tr><a href='lol.php'><td>$co</td><td>$row[pack_date]</td><td>$row[payment_id]</td> <td><input type='submit' value='Print Recipt' onclick='goes($row[optid] )'></td></a></tr>";
 $co++;
