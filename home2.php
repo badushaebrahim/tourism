@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Admin Home</title>
 </head>
-<body><br>
+<body background="66.png"><br>
+
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <div class="topnav">

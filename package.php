@@ -1,5 +1,5 @@
 <html>
-<body background="ji.png">
+<body background="pp.png">
 <center>
 <form method="POST">
 <br><br><br><br><br><br><br><br><br>

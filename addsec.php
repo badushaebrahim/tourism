@@ -6,14 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>update sec</title>
 </head>
-<body>
+<body background="mm.png">
+
+
 <center>
 <form method="POST">
-<table><caption>About location</caption>
+
+
+<table><caption><b>ABOUT LOCATION</b></caption><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
-<tr><td>sec1</td><td><textarea name="sec1"></textarea></td></tr>
-<tr><td>sec2</td><td><textarea name="sec2"></textarea></td></tr>
-<tr><td><input type="submit" value="submit" name="sub"></textarea></td></tr>
+<tr><td><b>sec1</b></td><td><textarea name="sec1"></textarea></td></tr><br><br>
+<tr><td><b>sec2</b></td><td><textarea name="sec2"></textarea></td></tr><br><br>
+<tr><td><input type="submit" value="submit" name="sub"></textarea></td></tr><br>
 
 
 </table>

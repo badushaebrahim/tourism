@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Payment page </title>
 </head>
-<body><form method="POST"><center>
+<body background="44.png"><form method="POST"><center>
 	<table>
-	<Caption><h1>Payment Page</h1></Caption>
+	<Caption><h1><b>PAYMENT PAGE</b></h1></Caption><br><br>
 
-	<tr>	<td>Payment Method</td><td>	<select name="payid"><option value="upi" >UPI</option><option value="upi">PayPal</option></select> 	</td>	</tr>
-	<tr>	<td>Dte of Package</td><td><input type="date" name =date ></td>	</tr>
+	<tr>	<td><b>Payment Method</b></td><td>	<select name="payid"><option value="upi" >UPI</option><option value="upi">PayPal</option></select><br><br> 	</td>	</tr>
+	<tr>	<td><b>Dte of Package</b></td><td><input type="date" name =date ></td>	</tr><br><br><br>
 
-	<tr>	<td>Transaction id</td><td><input type="text" name="tans"  ></td>	</tr>
-	<tr><td><input type="submit" name="submit" ></td></tr>
+	<tr>	<td><b>Transaction id</b></td><td><input type="text" name="tans"  ></td>	</tr><br><br>
+	<tr><td><input type="submit" name="submit" ></td></tr><br>
 	</table></form></center>
 </body>
 </html>

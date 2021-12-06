@@ -6,14 +6,14 @@
 Registration form</h1>
 </center>
 </head>
-<body background="new.png" width=200 height=200>
+<body background="33.png" width=200 height=200>
 <br><br>
 
 <table align="center" cellpadding="10">
 <form method="POST">
 <tr>
 <td>NAME</td>
-<td><input type="text" name="NAME" maxlength="30"/>
+<td><input type="text" required="" name="NAME" maxlength="30"/>
 </td>
 </tr>
 <tr>
@@ -30,7 +30,7 @@ Registration form</h1>
 <td>EMAIL ID</td>
 <td><input type="text" name="EMAILID" maxlength="100" />
 </td>
-<tr><td>Password</td><td><input type="password"name="pwd"></td></tr>
+<tr><td>Password</td><td><input type="password"name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required="" placeholder="Your Password.."></td></tr>
 </tr>
 <tr>
 <td>ph no</td>
@@ -39,7 +39,7 @@ Registration form</h1>
 </tr>
 <tr>
 <td>ADDRESS<br /><br /><br /></td>
-<td><textarea name="Address" rows="4" cols="30"></textarea></td>
+<td><textarea name="Address" required=""rows="4" cols="30"></textarea></td>
 
 </tr>
 <tr>

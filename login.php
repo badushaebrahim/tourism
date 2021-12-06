@@ -3,7 +3,7 @@ $pack=$_GET['packid'];
 ?>
 
 <html>
-<body background="back.png" >
+<body background="55.png" >
 <center>
 <br><br><br><br><br><br><br><br><br><br>
 <h2>

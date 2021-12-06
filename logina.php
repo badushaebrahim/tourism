@@ -1,10 +1,10 @@
 <html>
-<body background="back.png" >
+<body background="ss.png" >
 <center>
 <br><br><br><br><br><br><br><br><br><br>
 <h2>
 	<form method="POST">
-Email:<input type="text" name="userid"/><br><br>
+admin id:<input type="text" name="userid"/><br><br>
 password:<input type="password" name="password"/><br><br>
 
 <br>

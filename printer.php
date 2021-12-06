@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body><center>
+<body background="yy.png"><center>
 	<?php
 		$id =$_GET['id'];
 		//echo "$id";
@@ -23,12 +23,12 @@
 		$lol33=mysqli_query($conn,$new22);
 		$res33=mysqli_fetch_assoc($lol33);
 		echo"<h4>
-		<table><caption><h1>Recipt</h1></caption>
+		<table border='solid white' ><caption><h1><b>RECEIPT</b></h1></caption><br><br>
 		
-		<tr>	<td>Mode of transaction</td><td>$res[mode_of_payment]</td>		</tr>
-		<tr>	<td>Price</td><td>$res[price]</td>		</tr>
-		<tr>	<td>Destination</td><td>$res2[location]</td>		</tr>
-		<tr>	<td>Date</td><td>$res33[pack_date]</td>		</tr>
+		<tr>	<td>Mode of transaction</td><td>$res[mode_of_payment]</td>		</tr><br>
+		<tr>	<td>Price</td><td>$res[price]</td>		</tr><br>
+		<tr>	<td>Destination</td><td>$res2[location]</td>		</tr><br>
+		<tr>	<td>Date</td><td>$res33[pack_date]</td>		</tr><br>
 		</table></h4>
 		";
 		

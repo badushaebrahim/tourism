@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body><br>
+<body background="22.png"<br>
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <div class="topnav">
@@ -24,7 +24,7 @@ include './dbcheck.inc.php';
 session_start();
 $co=0;
 $co2=$_SESSION['uid'];
-echo"<table border='solid white' ><caption><h1>MY Trips</h1></caption><tr><td>No:</td><td>Date</td><td>Payment_id</td><td>Action</td></tr>";
+echo"<table border='solid white' ><caption><h1><b>MY Trips</b></h1></caption><br><tr><td><b>No:</b></td><br><td><b>Date</b></td><br><td><b>Payment_id</b></td><br><td><b>Action</b></td></tr>";
 $sql = "SELECT * FROM `opted_packages` WHERE `user_id`=$co2";
 $lo=mysqli_query($conn,$sql);while($row=mysqli_fetch_assoc($lo)){
 	echo"<tr><a href='lol.php'><td>$co</td><td>$row[pack_date]</td><td>$row[payment_id]</td> <td><input type='submit' value='Print Recipt' onclick='goes($row[optid] )'></td></a></tr>";
