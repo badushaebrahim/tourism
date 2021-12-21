@@ -13,12 +13,13 @@
   <a  class="hide"href="#news">................................................................</a>
   <a class="hide"href="#news">................................................................</a>
   <a class="hide"href="#news">................................................................</a>
-  <a class="hide"href="#news">................................................................</a>
+  <a class="hide"href="#news">................</a>
+  <a href="fed.php">Give Feadback</a>
 
   <a href="moreoffer.php">BOOK MORE</a>
   <a href="index.php">Sign Out</a>
   </div>
-</div><br><br><center>
+</div><br><br> <center><div class="cor">
 <?php
 include './dbcheck.inc.php';
 session_start();
@@ -32,10 +33,18 @@ $co++;
 }
 echo"</table>";
 ?>
-</center>
 
+</div></center>
 </body>
 </html><style>/* Add a black background color to the top navigation */
+.cor{
+  background-color:rgba(161, 165, 165, 0.75);
+  border-radius:45px;
+  padding:1rem;
+  
+ width:50%;
+ padding-bottom: 6rem;;
+}
 body{
 	background-color: white;
 	color:black;

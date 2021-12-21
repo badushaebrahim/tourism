@@ -1,0 +1,229 @@
+/* contact us css file */
+:root{
+    --main-color:#1f4cee;
+    --black:#3aff09;
+    --gd:#485063;
+    --bg:#ffffffe8;
+    --border:.1rem solid rgb(0, 0, 0);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size:.7rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+.container {
+    padding-top: 2rem;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, rgba(3, 98, 108, 0.5), rgba(235, 227, 227, 0.5)), url('bg_img.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-wrapper {
+    margin: 2rem 0;
+    flex: 0 1 520px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.contact-wrapper .title {
+    width: 100%;
+}
+
+.title h1 {
+    position: relative;
+    color: #fff;
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title h1::first-letter {
+    color: rgb(15, 33, 231);
+    font-size: 2.8rem;
+}
+
+.title h1::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    height: 5px;
+    width: 4rem;
+    background: rgb(52, 68, 248);
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.title h1:hover::before {
+    width: 6rem;
+}
+
+.contact-wrapper form {
+    margin: 1.4rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+form .name-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-wrap .input-box {
+    width: 48%;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: rgb(39, 32, 255);
+    border-radius: 5rem;
+}
+
+@media (max-width: 440px) {
+    form .name-wrap {
+        flex-direction: column;
+    }
+
+    .name-wrap .input-box {
+        width: 100% !important;
+    }
+
+}
+
+form .input-box {
+    margin-top: 4.2rem;
+    height: 3.4rem;
+    width: 100%;
+    position: relative;
+}
+
+.input-box input,
+.textarea-box textarea {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 0.1rem;
+    outline: none;
+    color: #929292;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+}
+
+.input-box .bottom-line,
+.textarea-box .bottom-line {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(44, 37, 253);
+    border-radius: 0.1rem;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+input:focus~.bottom-line,
+textarea:focus~.bottom-line {
+    transform: scaleX(0.7rem);
+}
+
+.input-box label,
+.textarea-box label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-70%);
+    color: #9e9e9e;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+input:focus~label,
+input:valid~label {
+    transform: translateY(-52px);
+    font-size: 1rem;
+    color: #fff;
+    left: 0;
+}
+
+form .textarea-box {
+    flex: 1 1 auto;
+    margin-top: 4.2rem;
+    position: relative;
+}
+
+.textarea-box textarea {
+    padding-top: 1rem;
+    width: 100%;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.textarea-box .bottom-line {
+    bottom: 0.4rem;
+}
+
+.textarea-box label {
+    top: 1rem;
+    left: 1rem;
+    transform: translateY(0);
+}
+
+textarea:focus~label,
+textarea:valid~label {
+    transform: translateY(-42px);
+    font-size: 1rem;
+    color: #fff;
+    left: 0;
+}
+
+form .btn {
+    margin-top:1.8rem;
+    padding-right: 4rem;
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.6rem 2rem;
+    font-size: 1rem;
+    color:rgb(255, 255, 255);
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.login-btn{
+padding-right: 1rem;
+}
