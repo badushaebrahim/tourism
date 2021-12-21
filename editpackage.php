@@ -47,23 +47,28 @@ $loc=$_POST['Loc'];
 $sec1=$_POST['sec1'];
 $sec2=$_POST['sec2'];
 
-echo "<script>console.log('inside45')</script>";
+echo "<script>console.log('inside45+$cost,$about,$loc,$sec1,$sec2')</script>";
 //$about22="UPDATE `aboutpack` SET `sec1`='$sec1',`sec2`='$sec2',`location`='$loc' WHERE `packid`=$id"
-$packs="UPDATE `packages` SET`cost`=$cost,`about`=$about,`location`=$loc WHERE `pack_no`=$id ";
+$packs="UPDATE `packages` SET`cost`=$cost,`about`='$about',`location`='$loc' WHERE `pack_no`=$id ";
 //echo "<script>console.log($cost+$about+$loc+$sec1)</script>";
 //$packs="UPDATE `packages` SET `cost`=$cost,`about`='$about',`location`='$loc' WHERE `pack_no`=$id";
 echo "<script>console.log('$sec2')</script>";
 
 //$about2="UPDATE `aboutpack` SET `sec1`='$sec1,`sec2`=$sec2,`location`= $loc WHERE `packid`=$id";
-$about2="UPDATE `aboutpack` SET `sec1`='$sec1', `sec2`='$sec2', `location`='$loc' WHERE `packid`='$id;";
+$about2="UPDATE `aboutpack` SET `sec1`='$sec1', `sec2`='$sec2', `location`='$loc' WHERE `packid`=$id;";
 if($mok=mysqli_query($conn,$about2)){
 	echo "<script>console.log('yo')</script>";
 	if($pp=mysqli_query($conn,$about2)){
 	echo "<script>console.log(' successadobut')</script>";
+	echo "<script>location.href='home2.php'</script>";
 	}else{echo "<script>console.log('failinside')</script>";}
 
 }
-else{echo "<script>console.log('failout63')</script>";}
+else
+{
+	echo "<script>console.log('failout63')</script>";
+	echo "<script>console.log('$mok')</script>";
+}
 }
 
 ?>
