@@ -62,7 +62,7 @@
             {
                 echo "<script>console.log(' successadobut')</script>";
 echo "<script>alert('Updated')</script>";
-echo "<script>location.href='home2.php'</script>";
+echo "<script>location.href='home2.php  '</script>";
             }
             else
             {

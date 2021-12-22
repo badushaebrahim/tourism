@@ -63,7 +63,7 @@ $cost=$_GET['co'];
 		if(1==1)
 		{
 
-        echo "<script>console.log('75$da')</script>";
+        echo "<script>console.log('75$ps,$gen,$cost,$name')</script>";
 			//save to database
 			
 			$query = "INSERT INTO `aboutpack`(`packid`, `sec1`, `sec2`, `location`) VALUES (' $gen','$name','$ps','$cost');";
@@ -73,6 +73,7 @@ $cost=$_GET['co'];
 			if(mysqli_query($conn,$query)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
+ echo "<script>location.href='home2.php'</script>";
 		
 		
                 echo"<script>location.href='home2.php';	</script>";
@@ -81,7 +82,7 @@ $cost=$_GET['co'];
             
 			
 		}else
-		{
+		{echo "<script>alert('update no')</script>";
 			echo "Please enter some valid information!";
 		}
 	}
