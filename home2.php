@@ -14,7 +14,8 @@
   <a  class="hide"href="#news">................................................................</a>
   <a class="hide"href="#news">................................................................</a>
   <a class="hide"href="#news">................................................................</a>
-  <a class="hide"href="#news">................................................................</a>
+  <a class="hide"href="#news">........</a>
+  <a href="getfed.php">Feadback</a>
 
   <a href="package.php">Add Package</a>
   <a href="index.php">Sign Out</a>
