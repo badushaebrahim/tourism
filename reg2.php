@@ -114,7 +114,7 @@ $dob=$_POST['do'];
                 echo "<script>alert('update ok successful')</script>";
 		
 		
-                echo"<script>location.href='login2.php?packid=$id';	</script>";
+                echo"<script>location.href='login2.php';	</script>";
 		//header("Location: .../sl/index.html");// replace '.../sl/index.html with .../foldername/homepage_filename
             }
             
@@ -129,7 +129,15 @@ $dob=$_POST['do'];
 
 
 
-
+<style>.cor{
+  background-color:rgba(161, 165, 165, 0.75);
+  border-radius:45px;
+  padding:1rem;
+  
+ width:50%;
+ padding-bottom: 6rem;;
+}
+	</style>
 
 
 
