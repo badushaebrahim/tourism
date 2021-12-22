@@ -7,68 +7,77 @@
 	<title>Edit</title>
 </head>
 <body background="xx.png">
-<center>	
-<table><caption><h1>Editing </h1> 	</captions>
+    <center>	
+        <table><caption><h1>Editing </h1> 	</captions>
 
-<form method="POST">	
-	
-<?php
-include './dbcheck.inc.php';
-$id=$_GET['id'];
-$pk="SELECT * FROM `packages` WHERE `pack_no`=$id";
-$sk="SELECT * FROM `aboutpack` WHERE `packid`=$id";
-if(($mok=mysqli_query($conn,$pk))&&($pp=mysqli_query($conn,$sk))){
-	$ro=mysqli_fetch_assoc($mok);
-	$rom=mysqli_fetch_assoc($pp);
-	
-	echo"
-<tr><td>Location:</td><td> <textarea  name='Loc' >$ro[location]</textarea></td></tr><br><br><br><br>
-<tr><td>About:</td><td> <textarea name='About' >$ro[about]</textarea></td></tr><br><br><br><br>
-<tr><td>Cost: </td><td><input type='number' name='Cost' value='$ro[cost]' ></td></tr><br><br><br>
-<tr><td>sec1</td><td><textarea name='sec1'>$rom[sec1]</textarea></td></tr>
-<tr><td>sec2</td><td><textarea name='sec2'>$rom[sec2]</textarea></td></tr>";
-echo"<tr><td></td><td><input type='Submit' name='sub' value='Submit'><a href='home2.php'><input type='button' name='sub' value='Back'></a></td></tr>
+            <form method="POST">	
+                
+                <?php
+                    include './dbcheck.inc.php';
+                    $id=$_GET['id'];
+                    $pk="SELECT * FROM `packages` WHERE `pack_no`=$id";
+                    $sk="SELECT * FROM `aboutpack` WHERE `packid`=$id";
+                    if(($mok=mysqli_query($conn,$pk))&&($pp=mysqli_query($conn,$sk)))
+                    {
+                        $ro=mysqli_fetch_assoc($mok);
+                        $rom=mysqli_fetch_assoc($pp);
+                            
+                        echo"
+                        <tr><td>Location:</td><td> <textarea name='Loc' >$ro[location]</textarea></td></tr><br><br><br><br>
+                        <tr><td>About:</td><td> <textarea name='About' >$ro[about]</textarea></td></tr><br><br><br><br>
+                        <tr><td>Cost: </td><td><input type='number' name='Cost' value='$ro[cost]' ></td></tr><br><br><br>
+                        <tr><td>sec1</td><td><textarea name='sec1'>$rom[sec1]</textarea></td></tr>
+                        <tr><td>sec2</td><td><textarea name='sec2'>$rom[sec2]</textarea></td></tr>";
+                        echo"<tr><td></td><td><input type='Submit' name='sub' value='Submit'><a href='home2.php'><input type='button' name='sub' value='Back'></a></td></tr>
 
-</form>
-</table>
-";
-}
-
-
-?></form></table></center>
+                        ";
+                    }
+                ?>
+            </form>
+        </table>
+    </center>
 </body>
 </html>
 <?php
 
-if(isset($_POST['sub'])){
-$cost=$_POST['Cost'];
-$about=$_POST['About'];
-$loc=$_POST['Loc'];
-$sec1=$_POST['sec1'];
-$sec2=$_POST['sec2'];
+    if(isset($_POST['sub']))
+    {
+        $cost=$_POST['Cost'];
+        $about=$_POST['About'];
+        $loc=$_POST['Loc'];
+        $sec1=$_POST['sec1'];
+        $sec2=$_POST['sec2'];
 
-echo "<script>console.log('inside45+$cost,$about,$loc,$sec1,$sec2')</script>";
-//$about22="UPDATE `aboutpack` SET `sec1`='$sec1',`sec2`='$sec2',`location`='$loc' WHERE `packid`=$id"
-$packs="UPDATE `packages` SET`cost`=$cost,`about`='$about',`location`='$loc' WHERE `pack_no`=$id ";
-//echo "<script>console.log($cost+$about+$loc+$sec1)</script>";
-//$packs="UPDATE `packages` SET `cost`=$cost,`about`='$about',`location`='$loc' WHERE `pack_no`=$id";
-echo "<script>console.log('$sec2')</script>";
+        echo "<script>console.log('inside45')</script>";
+        $packs="UPDATE `packages` SET `cost`='$cost',`about`='$about',`location`='$loc' WHERE `pack_no`='$id'; ";
+        $mok=mysqli_query($conn,$packs);
+        echo "<script>console.log('$sec2')</script>";
 
-//$about2="UPDATE `aboutpack` SET `sec1`='$sec1,`sec2`=$sec2,`location`= $loc WHERE `packid`=$id";
-$about2="UPDATE `aboutpack` SET `sec1`='$sec1', `sec2`='$sec2', `location`='$loc' WHERE `packid`=$id;";
-if($mok=mysqli_query($conn,$about2)){
-	echo "<script>console.log('yo')</script>";
-	if($pp=mysqli_query($conn,$about2)){
-	echo "<script>console.log(' successadobut')</script>";
-	echo "<script>location.href='home2.php'</script>";
-	}else{echo "<script>console.log('failinside')</script>";}
+        $about2="UPDATE `aboutpack` SET `sec1`='$sec1', `sec2`='$sec2',`location`='$loc' WHERE `packid`='$id';";
+        $pp=mysqli_query($conn,$about2);
+        if($mok)
+        {
+            echo "<script>console.log('yo')</script>";
+            if($pp)
+            {
+                echo "<script>console.log(' successadobut')</script>";
+echo "<script>alert('Updated')</script>";
+echo "<script>location.href='home2.php'</script>";
+            }
+            else
+            {
+                echo "<script>console.log('failinside')</script>";
+            }
 
-}
-else
-{
-	echo "<script>console.log('failout63')</script>";
-	echo "<script>console.log('$mok')</script>";
-}
-}
+        }
+        else
+        {
+            echo "<script>console.log('failout63')</script>";
+        }
+    }
+    else
+    {
+        echo "<script>console.log('failout78')</script>";
+    }
 
 ?>
