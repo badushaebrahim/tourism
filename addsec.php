@@ -65,9 +65,7 @@ $cost=$_GET['co'];
 
         echo "<script>console.log('75$ps,$gen,$cost,$name')</script>";
 			//save to database
-			
 			$query = "INSERT INTO `aboutpack`(`packid`, `sec1`, `sec2`, `location`) VALUES (' $gen','$name','$ps','$cost');";
-
         echo "<script>console.log('80')</script>";
 
 			if(mysqli_query($conn,$query)){

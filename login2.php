@@ -7,7 +7,7 @@
 Email:<input type="text" name="userid"/><br><br>
 password:<input type="password" name="password"/><br><br>
 <br>
-If no account <a href='registration.php'>Register</a>
+If no account <a href='reg2.php'>Register</a>
 <br>
 <br>
 <br>
