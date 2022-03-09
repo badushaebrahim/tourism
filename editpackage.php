@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Edit</title>
 </head>
-<body background="xx.png">
+<body background="02.png">
     <center>	
         <table><caption><h1>Editing </h1> 	</captions>
 

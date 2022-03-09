@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>get feadback</title>
 </head>
-<body>
+<body background="01.png">
 </div><br><br><center>
 <?php
 include './dbcheck.inc.php';

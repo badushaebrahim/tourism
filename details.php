@@ -94,10 +94,10 @@
 						echo"<a href='login.php?packid=$packid'><input class='epic'value='book'type='Button'></a>";
 
 						echo"<ul class='withArrow'>
-							<li><span class='fa fa-angle-right'></span> Lorem ipsum dolor sit amet</li>
-							<li><span class='fa fa-angle-right'></span> consectetur adipiscing elit</li>
-							<li><span class='fa fa-angle-right'></span> Curabitur aliquet quam id dui</li>
-							<li><span class='fa fa-angle-right'></span> Donec sollicitudin molestie malesuada.</li>
+							<li><span class='fa fa-angle-right'></span> Affordable Trips</li>
+							<li><span class='fa fa-angle-right'></span> Experienced Guides</li>
+							<li><span class='fa fa-angle-right'></span>All Round Travel protection</li>
+							<li><span class='fa fa-angle-right'></span>Best Ratesd Trips</li>
 						</ul> 
 					</div>
 				</div>'";

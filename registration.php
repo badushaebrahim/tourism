@@ -6,7 +6,7 @@
 Registration form</h1>
 </center>
 </head>
-<body background="33.png" width=200 height=200>
+<body background="50.png" width=200 height=200>
 <br><br>
 
 <table align="center" cellpadding="10">
