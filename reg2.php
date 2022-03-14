@@ -28,18 +28,18 @@ Registration form</h1>
 </tr>
 <tr>
 <td>EMAIL ID</td>
-<td><input type="text" name="EMAILID" maxlength="100" />
+<td><input type="text"  required="" name="EMAILID" maxlength="100" />
 </td>
 <tr><td>Password</td><td><input type="password"name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required="" placeholder="Your Password.."></td></tr>
 </tr>
 <tr>
 <td>ph no</td>
-<td><input type="text" name="phno" maxlength="10" />
+<td><input type="text" required="" name="phno" maxlength="10" />
 </td>
 </tr>
 <tr>
 <td>ADDRESS<br /><br /><br /></td>
-<td><textarea name="Address" required=""rows="4" cols="30"></textarea></td>
+<td><textarea name="Address" required="" rows="4" cols="30"></textarea></td>
 
 </tr>
 <tr>
@@ -50,7 +50,7 @@ Registration form</h1>
 </td>
 </tr>
 <td>CITY2</td>
-<td><input type="text" name="city" maxlength="30" />
+<td><input type="text" required="" name="city" maxlength="30" />
 </td>
 </tr>
 

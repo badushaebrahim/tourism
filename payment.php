@@ -60,14 +60,14 @@ $dob=$_POST['date'];
 			$my="SELECT * FROM `packages` WHERE `pack_no`=$email";
 			$lk=mysqli_query($conn,$my);$ro=mysqli_fetch_assoc($lk);
 			
-$query="INSERT INTO `payment`(`mode_of_payment`, `pack_no`, `price`, `transcationid`,`userid`) VALUES ('$name','$email','$ro[cost]','$ps','$gen')";
+$query="INSERT INTO `payment`(`mode_of_payment`, `pack_no`, `price`, `transcationid`, `userid`) VALUES ('$name',$email,'$ro[cost]','$ps','$gen')";
 			$sql="INSERT INTO `opted_packages`(`pack_no`, `user_id`, `pack_date`, `payment_id`)VALUES ($email,$gen,'$dob','$ps')";
 
         echo "<script>console.log('80ks')</script>";
 
-			if(mysqli_query($conn,$sql)){
+			if(mysqli_query($conn,$query)){
 
-				if(mysqli_query($conn,$query)){
+				if(mysqli_query($conn,$sql)){
                 echo "<script>console.log('done')</script>";
                 echo "<script>alert('update ok successful')</script>";
                echo"<script>location.href='home.php';	</script>";
