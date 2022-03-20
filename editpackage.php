@@ -20,14 +20,14 @@
                     if(($mok=mysqli_query($conn,$pk))&&($pp=mysqli_query($conn,$sk)))
                     {
                         $ro=mysqli_fetch_assoc($mok);
-                        $rom=mysqli_fetch_assoc($pp);
+                        $rom2=mysqli_fetch_assoc($pp);
                             
                         echo"
                         <tr><td>Location:</td><td> <textarea name='Loc' >$ro[location]</textarea></td></tr><br><br><br><br>
                         <tr><td>About:</td><td> <textarea name='About' >$ro[about]</textarea></td></tr><br><br><br><br>
                         <tr><td>Cost: </td><td><input type='number' name='Cost' value='$ro[cost]' ></td></tr><br><br><br>
-                        <tr><td>sec1</td><td><textarea name='sec1'>$rom[sec1]</textarea></td></tr>
-                        <tr><td>sec2</td><td><textarea name='sec2'>$rom[sec2]</textarea></td></tr>";
+                        <tr><td>sec1</td><td><textarea name='sec1'>$rom2[sec1]</textarea></td></tr>
+                        <tr><td>sec2</td><td><textarea name='sec2'>$rom2[sec2]</textarea></td></tr>";
                         echo"<tr><td></td><td><input type='Submit' name='sub' value='Submit'><a href='home2.php'><input type='button' name='sub' value='Back'></a></td></tr>
 
                         ";
