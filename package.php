@@ -1,8 +1,10 @@
 <html>
 <body background="01.png">
 <center>
-<form method="POST">
+<form method="POST"enctype="multipart/form-data">
 <br><br><br><br><br><br><br><br><br>
+Image: <input type="file" name="file" id="file">
+<br><br><br><br>
 Location: <input type="text" name="Location" /><br><br><br><br>
 About: <input type="textarea" name="About" row="4" cols="30" /><br><br><br><br>
 Cost: <input type="number" name="Cost" /><br><br><br>
@@ -14,11 +16,33 @@ Cost: <input type="number" name="Cost" /><br><br><br>
 
 <?php 
 include './dbcheck.inc.php';
-
+//new
+    // Allow certain file formats
+    // File upload path
+$targetDir = "uploads/";
+$fileName = basename($_FILES["file"]["name"]);
+$targetFilePath = $targetDir . $fileName;
+$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+    $allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
+        // Upload file to server
+      //else{
+     //   $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+   // }
+//}else{
+  //  $statusMsg = 'Please select a file to upload.';
+}
+//newr
     echo "<script>console.log('55')</script>";
 
 	if(isset($_POST['sub']))
 	{
+		if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath))
+		echo "<script> console.log('file upload ok')</script>";
+		else
+		echo "<script> console.log('no file')</script>";
+			
+
         echo "<script> console.log('58')</script>";
 		//something was posted
 		/*$user_name = $_POST['username'];
@@ -49,7 +73,7 @@ $dob=$_POST['do'];	*/
         echo "<script>console.log('75$da')</script>";
 			//save to database
 			
-			$query = "INSERT INTO `packages`( `cost`, `about`, `location`) VALUES('$gen','$ps',' $name');";
+			$query = "INSERT INTO `packages`( `cost`, `about`,`filename`, `location`) VALUES('$gen','$ps','$fileName',' $name');";
 
         echo "<script>console.log('80')</script>";
 
