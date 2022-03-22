@@ -18,7 +18,12 @@ Cost: <input type="number" name="Cost" /><br><br><br>
 include './dbcheck.inc.php';
 //new
     // Allow certain file formats
-    // File upload path
+    
+    echo "<script>console.log('55')</script>";
+
+	if(isset($_POST['sub']))
+	{
+		// File upload path
 $targetDir = "uploads/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
@@ -33,10 +38,6 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
   //  $statusMsg = 'Please select a file to upload.';
 }
 //newr
-    echo "<script>console.log('55')</script>";
-
-	if(isset($_POST['sub']))
-	{
 		if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath))
 		echo "<script> console.log('file upload ok')</script>";
 		else
