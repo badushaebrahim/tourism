@@ -107,7 +107,7 @@ include'./dbcheck.inc.php';
             {echo"<div class='col-md-4'>
 			<div class='box-content'>
 			<a href='details.php?dif=$row[pack_no]'>
-               <img class='img-responsive'   src='img/spc/$co.jpg' alt=''>   
+               <img class='img-responsive'   src='uploads/$row[filename]' alt=''>   
                 <h3>$row[location] <span class='price pull-right'>$row[cost]</span></h3>
 				
                 <p>$row[about]</p>  
